@@ -170,6 +170,8 @@ button {
     font-weight: bold;
 }
 
+
+
 .symbol-1 {
     font-size: 80px;
     top: 15%;
@@ -1194,4 +1196,350 @@ body.dark-mode .back-top {
 body.dark-mode .back-top:hover {
     background: #e58aaa;
     color: #ffffff;
+}
+
+
+/* ========================================
+   MINI DEVELOPER TERMINAL
+======================================== */
+
+.terminal-section {
+    padding-top: 90px;
+    padding-bottom: 100px;
+}
+
+.terminal-window {
+    width: min(750px, 100%);
+    margin: 40px auto 0;
+    overflow: hidden;
+    border: 1px solid rgba(229, 138, 170, 0.35);
+    border-radius: 18px;
+    background: #211d27;
+    box-shadow: 0 20px 50px rgba(50, 30, 45, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.terminal-window:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 55px rgba(229, 138, 170, 0.18);
+}
+
+/* Terminal header */
+.terminal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 15px 20px;
+    background: #302936;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 7px;
+}
+
+.terminal-dots span {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+}
+
+.terminal-dots span:nth-child(1) {
+    background: #ff7b83;
+}
+
+.terminal-dots span:nth-child(2) {
+    background: #ffd477;
+}
+
+.terminal-dots span:nth-child(3) {
+    background: #8bd49c;
+}
+
+.terminal-title {
+    color: #e9dce7;
+    font-size: 13px;
+    font-family: monospace;
+}
+
+.terminal-version {
+    color: #e58aaa;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Terminal body */
+.terminal-body {
+    min-height: 280px;
+    padding: 25px;
+    color: #e9e1e9;
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.terminal-welcome p {
+    margin: 0 0 5px;
+}
+
+.terminal-pink,
+.terminal-command {
+    color: #f3a7c4;
+}
+
+.terminal-command {
+    font-weight: bold;
+}
+
+.terminal-output {
+    margin-top: 20px;
+    overflow-wrap: anywhere;
+}
+
+.terminal-output p {
+    margin: 5px 0;
+}
+
+.terminal-output .terminal-result-title {
+    color: #f3a7c4;
+    font-weight: bold;
+}
+
+.terminal-output .terminal-error {
+    color: #ff8b91;
+}
+
+.terminal-output .terminal-success {
+    color: #a5e6b5;
+}
+
+/* Input line */
+.terminal-input-line {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 20px;
+}
+
+.terminal-prompt {
+    flex-shrink: 0;
+    color: #f3a7c4;
+    font-weight: bold;
+}
+
+.terminal-input-line input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #ffffff;
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    caret-color: #f3a7c4;
+}
+
+.terminal-input-line input::placeholder {
+    color: #968b9a;
+}
+
+/* Blinking cursor */
+.terminal-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 18px;
+    background: #f3a7c4;
+    margin-left: 5px;
+    vertical-align: middle;
+    animation: terminalBlink 0.8s steps(2, start) infinite;
+}
+
+@keyframes terminalBlink {
+    to {
+        visibility: hidden;
+    }
+}
+
+/* Terminal footer */
+.terminal-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 20px;
+    background: #302936;
+    color: #b9aeba;
+    font-family: monospace;
+    font-size: 10px;
+}
+
+.terminal-footer span:first-child {
+    color: #8bd49c;
+}
+
+/* Dark mode */
+body.dark-mode .terminal-window {
+    border-color: rgba(244, 183, 208, 0.25);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode .terminal-window:hover {
+    box-shadow: 0 25px 55px rgba(244, 183, 208, 0.12);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .terminal-section {
+        padding-top: 60px;
+        padding-bottom: 70px;
+    }
+
+    .terminal-body {
+        min-height: 260px;
+        padding: 18px 14px;
+        font-size: 11px;
+    }
+
+    .terminal-header {
+        padding: 13px;
+    }
+
+    .terminal-footer {
+        padding: 10px 13px;
+        font-size: 9px;
+    }
+
+    .terminal-prompt {
+        font-size: 10px;
+    }
+
+    .terminal-input-line {
+        gap: 6px;
+    }
+
+    .terminal-input-line input {
+        font-size: 11px;
+    }
+}
+
+/* ========================================
+   SPARKLE CURSOR TRAIL
+======================================== */
+
+.cursor-sparkle {
+    position: fixed;
+    pointer-events: none;
+    z-index: 99999;
+    font-size: 14px;
+    transform: translate(-50%, -50%);
+    animation: sparkleFloat 0.8s ease-out forwards;
+    text-shadow: 0 0 8px currentColor;
+}
+
+@keyframes sparkleFloat {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.5) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -70%) scale(1.2) rotate(90deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -120%) scale(0) rotate(180deg);
+    }
+}
+
+/* Disable sparkle trail on touch devices */
+@media (hover: none) {
+    .cursor-sparkle {
+        display: none;
+    }
+}
+
+/* PHOTO FRAME - LIGHT MODE */
+body:not(.dark-mode) .photo-frame {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #f4c3d4;
+
+    box-shadow:
+        0 15px 35px rgba(225, 143, 174, 0.15),
+        0 0 0 7px rgba(244, 195, 212, 0.12),
+        0 0 30px rgba(229, 138, 170, 0.12);
+}
+
+/* PHOTO FRAME HOVER */
+body:not(.dark-mode) .photo-frame:hover {
+    box-shadow:
+        0 20px 45px rgba(225, 143, 174, 0.22),
+        0 0 0 9px rgba(244, 195, 212, 0.16),
+        0 0 35px rgba(229, 138, 170, 0.2);
+}
+
+/* ========================================
+   SCROLL PROGRESS BAR
+======================================== */
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        #e58aaa,
+        #f3b6ce,
+        #d8a7ff
+    );
+    z-index: 100000;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 0 8px rgba(229, 138, 170, 0.35);
+    transition: width 0.08s linear;
+}
+
+/* ========================================
+   BUTTON HOVER EFFECTS
+======================================== */
+
+.button-primary,
+.button-secondary,
+.back-top,
+.button-outline {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Lift effect */
+.button-primary:hover,
+.button-secondary:hover,
+.back-top:hover,
+.button-outline:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 22px rgba(229, 138, 170, 0.22);
+}
+
+/* Click effect */
+.button-primary:active,
+.button-secondary:active,
+.back-top:active,
+.button-outline:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+/* Keyboard accessibility */
+.button-primary:focus-visible,
+.button-secondary:focus-visible,
+.back-top:focus-visible,
+.button-outline:focus-visible {
+    outline: 2px solid #e58aaa;
+    outline-offset: 4px;
 }

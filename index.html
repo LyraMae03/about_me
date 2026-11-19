@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
+<div class="scroll-progress" id="scrollProgress"></div>
 <body>
   <div class="background-decoration" aria-hidden="true">
     <div class="pink-blob blob-1"></div>
@@ -137,6 +138,68 @@
         <article class="skill-card reveal"><span class="skill-number">06</span><div class="skill-icon">▧</div><h3>Flutter</h3><p>Learning the basics of building cross-platform applications.</p><span class="skill-tag">App development</span></article>
       </div>
     </section>
+
+
+<!-- MINI DEVELOPER TERMINAL -->
+<section class="terminal-section section" id="terminal">
+    <div class="section-heading centered reveal">
+        <p class="eyebrow">A LITTLE SOMETHING EXTRA</p>
+        <h2>Explore my <span>terminal.</span></h2>
+        <p class="section-subtitle">
+            Curious about me? Try typing a command below!
+        </p>
+    </div>
+
+    <div class="terminal-window reveal">
+        <div class="terminal-header">
+            <div class="terminal-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <span class="terminal-title">lyra@about-me: ~</span>
+            <span class="terminal-version">BASH</span>
+        </div>
+
+        <div class="terminal-body">
+            <div class="terminal-welcome">
+                <p class="terminal-pink">Welcome to Lyra's Developer Terminal!</p>
+                <p>Hi there! I'm glad you're exploring my little corner of the web.</p>
+                <p>Type <span class="terminal-command">help</span> to see the available commands.</p>
+            </div>
+
+            <div class="terminal-output" id="terminalOutput" aria-live="polite"></div>
+
+                    <form class="terminal-input-line" id="terminalForm">
+            <label for="terminalInput" class="terminal-prompt">
+                lyra@portfolio:~$
+            </label>
+
+            <div class="terminal-input-wrapper">
+              
+                <input
+                    type="text"
+                    id="terminalInput"
+                    placeholder=""
+                    autocomplete="off"
+                    spellcheck="false"
+                    aria-label="Terminal command"
+                >
+
+                
+            </div>
+        </form>
+        </div>
+
+        <div class="terminal-footer">
+            <span>● SYSTEM ONLINE</span>
+            <span>Made with ♡ by Lyra</span>
+        </div>
+    </div>
+</section>
+<!-- END MINI DEVELOPER TERMINAL -->
+
 
     <section class="contact section" id="contact">
       <div class="contact-card reveal">
