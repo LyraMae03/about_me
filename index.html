@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The personal portfolio of Lyra Mae Borling, an Information Technology graduate interested in web development." />
+  <title>Lyra Mae Borling | Personal Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background-decoration" aria-hidden="true">
+    <div class="pink-blob blob-1"></div>
+    <div class="pink-blob blob-2"></div>
+    <div class="pink-blob blob-3"></div>
+    <span class="sparkle sparkle-1">✦</span>
+    <span class="sparkle sparkle-2">✧</span>
+    <span class="sparkle sparkle-3">✦</span>
+    <span class="sparkle sparkle-4">♡</span>
+    <span class="sparkle sparkle-5">✧</span>
+    <span class="tech-symbol symbol-1">&lt;/&gt;</span>
+    <span class="tech-symbol symbol-2">{ }</span>
+    <span class="tech-symbol symbol-3">&lt; / &gt;</span>
+  </div>
+
+
+<header class="site-header">
+    <a href="#home" class="logo"><span>L</span>M</a>
+
+    <nav class="nav" id="navMenu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+        <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Switch to dark mode"
+            title="Toggle dark mode"
+        >🌙</button>
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+        >☰</button>
+    </div>
+</header>
+
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-line"></span> HELLO, I'M LYRA</p>
+        <h1>Lyra Mae<br><span>Borling.</span></h1>
+        <p class="hero-role">
+            <span id="typingText"></span>
+            <span class="typing-cursor">|</span>
+        </p>
+        <p class="hero-description">
+          I enjoy exploring how technology works and turning ideas into useful,
+          simple, and meaningful digital experiences. I'm always curious,
+          learning, and growing one line of code at a time.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#about">Get to know me <span>↗</span></a>
+          <a class="text-link" href="mailto:lyraborling03@gmail.com">Let's connect <span>♡</span></a>
+        </div>
+        
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="photo-frame">
+          <div class="photo-top-label"></div>
+          <img src="images/ME_ME.png" alt="Portrait of Lyra Mae Borling" class="profile-photo"
+               onerror="this.style.display='none'; document.getElementById('photoPlaceholder').style.display='flex';" />
+          <div class="photo-placeholder" id="photoPlaceholder">
+            <span class="placeholder-heart">♡</span>
+            
+          </div>
+          <div class="photo-caption"><span>✿</span> nice to meet you!</div>
+        </div>
+        <div class="floating-tag tag-code">&lt; creativity /&gt;</div>
+        <div class="floating-tag tag-heart">made with ♡</div>
+        <span class="visual-sparkle">✧</span>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow">A LITTLE ABOUT ME</p>
+        <h2>Curious mind,<br><span>creative heart.</span></h2>
+      </div>
+      <div class="about-content reveal">
+        <div class="about-mark">♡</div>
+        <div>
+          <p>
+            I'm a Bachelor of Science in Information Technology graduate from
+            Eulogio "Amang" Rodriguez Institute of Science and Technology
+            (EARIST), Batch 2026. I have an interest in both frontend and backend
+            development, and I enjoy learning how different technologies work
+            together to build functional websites and applications.
+          </p>
+          <p>
+            I'm currently continuing to improve my programming skills, explore
+            new tools, and gain experience through personal and academic projects.
+            I believe that every project is an opportunity to learn something new.
+          </p>
+          <div class="about-facts">
+            <div><span class="fact-icon">✿</span><span><b>Education</b><small>BS Information Technology</small></span></div>
+            <div><span class="fact-icon">⌘</span><span><b>Interested in</b><small>Frontend & Backend Development</small></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills section" id="skills">
+      <div class="section-heading centered reveal">
+        <p class="eyebrow">WHAT I'M LEARNING</p>
+        <h2>My <span>IT toolkit.</span></h2>
+        <p class="section-subtitle">A growing set of skills I'm building through practice, projects, and curiosity.</p>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card reveal"><span class="skill-number">01</span><div class="skill-icon">〈/〉</div><h3>HTML & CSS</h3><p>Building and styling responsive, user-friendly web pages.</p><span class="skill-tag">Web fundamentals</span></article>
+        <article class="skill-card reveal"><span class="skill-number">02</span><div class="skill-icon">JS</div><h3>JavaScript</h3><p>Learning to add interactions and dynamic behavior to websites.</p><span class="skill-tag">Programming</span></article>
+        <article class="skill-card reveal"><span class="skill-number">03</span><div class="skill-icon">⚛</div><h3>React</h3><p>Creating reusable components and interactive interfaces.</p><span class="skill-tag">Frontend</span></article>
+        <article class="skill-card reveal"><span class="skill-number">04</span><div class="skill-icon">▤</div><h3>PHP & MySQL</h3><p>Working with server-side logic and relational databases.</p><span class="skill-tag">Backend & database</span></article>
+        <article class="skill-card reveal"><span class="skill-number">05</span><div class="skill-icon">⌘</div><h3>Node.js</h3><p>Exploring backend development and REST API fundamentals.</p><span class="skill-tag">Backend</span></article>
+        <article class="skill-card reveal"><span class="skill-number">06</span><div class="skill-icon">▧</div><h3>Flutter</h3><p>Learning the basics of building cross-platform applications.</p><span class="skill-tag">App development</span></article>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="contact-card reveal">
+        <span class="contact-decoration">♡</span>
+        <p class="eyebrow">LET'S KEEP IN TOUCH</p>
+        <h2>Have a project<br>or opportunity in mind?</h2>
+        <p>Feel free to explore my portfolio and get in touch if you'd like to connect or discuss an opportunity!</p>
+          <a class="button button-primary" href="mailto:lyraborling03@gmail.com">
+              Email Me ↗
+          </a>
+
+          <a class="button button-primary"
+            href="https://lyramaeportfolio.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer">
+              Visit My Portfolio ↗
+          </a>
+        <a class="github-link" href="https://github.com/LyraMae03" target="_blank" rel="noopener noreferrer">Or visit my GitHub profile ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#home" class="logo"><span>L</span>M</a>
+    <p>Made with <span>♡</span> by Lyra Mae Borling</p>
+    <button class="back-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+    Back to top ↑
+</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
